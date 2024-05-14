@@ -2,6 +2,8 @@
 
 
 START -> CODE
+
+
 CODE -> VDECL CODE
 CODE -> FDECL CODE
 CODE -> ''
