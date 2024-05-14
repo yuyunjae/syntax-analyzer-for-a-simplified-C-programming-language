@@ -3,7 +3,7 @@
 # parsing_table { (current_state, symbol) : (action, value) ... (..:..) ... }
 # shift example: (current_state, terminal): ('shift', post_state)
 # reduce example: (current_state, terminal): ('reduce', grammar_number)
-# goto example: (current_state, non_terminal): ('shift', goto_state)
+# goto example: (current_state, non_terminal): ('goto', goto_state)
 parsing_table = {
     (0, 'vtype'): ('shift', 4),
     (0, '$'): ('reduce', 3),
