@@ -1,40 +1,38 @@
 # syntax-analyzer-for-a-simplified-C-programming-language
 
-
-START -> CODE
-
-
-CODE -> VDECL CODE
-CODE -> FDECL CODE
-CODE -> ''
-VDECL -> vtype id semi
-VDECL -> vtype ASSIGN semi
-ASSIGN -> id assign RHS
-RHS -> EXPR
-RHS -> literal
-RHS -> character
-RHS -> boolstr
-EXPR -> TEXPR addsub EXPR
-EXPR -> TEXPR
-TEXPR -> FEXPR multdiv TEXPR
-TEXPR -> FEXPR
-FEXPR -> lparen EXPR rparen
-FEXPR -> id
-FEXPR -> num
-FDECL -> vtype id lparen ARG rparen lbrace BLOCK RETURN rbrace
-ARG -> vtype id MOREARGS 
-ARG -> ''
-MOREARGS -> comma vtype id MOREARGS 
-MOREARGS -> ''
-BLOCK -> STMT BLOCK 
-BLOCK -> ''
-STMT -> VDECL 
-STMT -> ASSIGN semi
-STMT -> if lparen COND rparen lbrace BLOCK rbrace ELSE
-STMT -> while lparen COND rparen lbrace BLOCK rbrace
-COND -> TCOND comp COND
-COND -> TCOND
-TCOND -> boolstr
-ELSE -> else lbrace BLOCK rbrace
-ELSE -> ''
-RETURN -> return RHS semi
+<br>
+<br>START -> CODE
+<br>CODE -> VDECL CODE
+<br>CODE -> FDECL CODE
+<br>CODE -> ''
+<br>VDECL -> vtype id semi
+<br>VDECL -> vtype ASSIGN semi
+<br>ASSIGN -> id assign RHS
+<br>RHS -> EXPR
+<br>RHS -> literal
+<br>RHS -> character
+<br>RHS -> boolstr
+<br>EXPR -> TEXPR addsub EXPR
+<br>EXPR -> TEXPR
+<br>TEXPR -> FEXPR multdiv TEXPR
+<br>TEXPR -> FEXPR
+<br>FEXPR -> lparen EXPR rparen
+<br>FEXPR -> id
+<br>FEXPR -> num
+<br>FDECL -> vtype id lparen ARG rparen lbrace BLOCK RETURN rbrace
+<br>ARG -> vtype id MOREARGS 
+<br>ARG -> ''
+<br>MOREARGS -> comma vtype id MOREARGS 
+<br>MOREARGS -> ''
+<br>BLOCK -> STMT BLOCK 
+<br>BLOCK -> ''
+<br>STMT -> VDECL 
+<br>STMT -> ASSIGN semi
+<br>STMT -> if lparen COND rparen lbrace BLOCK rbrace ELSE
+<br>STMT -> while lparen COND rparen lbrace BLOCK rbrace
+<br>COND -> TCOND comp COND
+<br>COND -> TCOND
+<br>TCOND -> boolstr
+<br>ELSE -> else lbrace BLOCK rbrace
+<br>ELSE -> ''
+<br>RETURN -> return RHS semi
