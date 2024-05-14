@@ -1,6 +1,8 @@
 # syntax-analyzer-for-a-simplified-C-programming-language
 
 <br>
+<h1>CFG<\h1>
+<br>
 <br>START -> CODE
 <br>CODE -> VDECL CODE
 <br>CODE -> FDECL CODE
