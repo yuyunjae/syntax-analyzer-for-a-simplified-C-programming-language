@@ -338,29 +338,7 @@ def slrParser(tokens):
         tmp.append(context_free_grammar[value][0][0])
         
         for i in range(0, sizeOfalpha):
-          parseTreeStack.pop()
-          stateStack.pop() #alpha의 길이만큼 stateStack을 pop시켜야 함
-        parseTreeStack.append(tmp) #새로운 트리를 parseTree에 추가시킴
-      else: #alpha가 엡실론인 경우
-        tmp = [context_free_grammar[value][0][0]]
-        parseTreeStack.append(tmp)
-        
-      #goto(pop이후 stateStack.top, A)를 stateStack에 push , 이때 A는 A -> alpha에서의 A임
-      
-      top = stateStack[len(stateStack)-1]
-      A = context_free_grammar[value][0][0]
-      #print(top, A)
-      goto, gotoState = parsing_table[top,A]
-      #print("gotoState:",gotoState)
-      stateStack.append(gotoState)
-      
-      
-      
-    else: #accept 되었을 때
-      print('accept !')
-      return parseTreeStack
-
-
+          pars수
 def createParseTree(parseTreeStack):
   parseTree = '('
   parseTree += parseTreeStack[len(parseTreeStack)-1]
@@ -381,9 +359,9 @@ splitedToken = tokens.split(" ") #띄어쓰기로 token 구분하기
 
 parseTreeStack = slrParser(splitedToken)[0]
 
-print(parseTreeStack)
-print(len(parseTreeStack))
-print(parseTreeStack[0][len(parseTreeStack[0])-1])
+#print(parseTreeStack)
+#print(len(parseTreeStack))
+#print(parseTreeStack[0][len(parseTreeStack[0])-1])
 
 parseTreeString = createParseTree(parseTreeStack)
 tree = Tree.fromstring(parseTreeString)
