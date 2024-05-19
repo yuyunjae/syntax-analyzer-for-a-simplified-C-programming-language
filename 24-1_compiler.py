@@ -316,10 +316,11 @@ def slrParser(tokens):
       break
     action, value = parsing_table[currentState, nextSymbol]
     
-    print("---------step",numOfStep,"-------")
+    #사용자에게 parsing stack과 trace를 보여주기 위한 콘솔 출력문 
+    print("---------step",numOfStep,"-------") 
     print("{current state:",currentState, "next symbol:",nextSymbol,"}")
     print("{",action , " : " , value, " }")
-    print("parseTreeStack",parseTreeStack)
+    #print("parseTreeStack",parseTreeStack)
     #print("stateStack", stateStack)
     print("")
     if action == "shift":
@@ -338,8 +339,30 @@ def slrParser(tokens):
         tmp.append(context_free_grammar[value][0][0])
         
         for i in range(0, sizeOfalpha):
-          pars수
-def createParseTree(parseTreeStack):
+          parseTreeStack.pop()
+          stateStack.pop() #alpha의 길이만큼 stateStack을 pop시켜야 함
+        parseTreeStack.append(tmp) #새로운 트리를 parseTree에 추가시킴
+      else: #alpha가 엡실론인 경우
+        tmp = [context_free_grammar[value][0][0]]
+        parseTreeStack.append(tmp)
+        
+      #goto(pop이후 stateStack.top, A)를 stateStack에 push , 이때 A는 A -> alpha에서의 A임
+      
+      top = stateStack[len(stateStack)-1]
+      A = context_free_grammar[value][0][0]
+      #print(top, A)
+      goto, gotoState = parsing_table[top,A]
+      #print("gotoState:",gotoState)
+      stateStack.append(gotoState)
+      
+      
+      
+    else: #accept 되었을 때
+      print('accept !')
+      return parseTreeStack
+
+#nltk를 통해 gui를 출력하기 위한 문자열 생성 함수 (재귀로 동작함)
+def createParseTree(parseTreeStack): 
   parseTree = '('
   parseTree += parseTreeStack[len(parseTreeStack)-1]
   if len(parseTreeStack)>=2:
@@ -353,18 +376,20 @@ def createParseTree(parseTreeStack):
 #tokens = "vtype id assign character semi vtype id lparen vtype id comma vtype id comma vtype id rparen lbrace if lparen boolstr comp boolstr rparen lbrace while lparen boolstr rparen lbrace id assign literal semi rbrace rbrace else lbrace vtype id semi rbrace return character semi $"
 
 #accept case
-tokens = "vtype id assign character semi vtype id lparen vtype id comma vtype id comma vtype id rparen lbrace if lparen boolstr comp boolstr rparen lbrace while lparen boolstr rparen lbrace id assign literal semi rbrace rbrace else lbrace vtype id semi rbrace return character semi rbrace $"
+#tokens = "vtype id assign character semi vtype id lparen vtype id comma vtype id comma vtype id rparen lbrace if lparen boolstr comp boolstr rparen lbrace while lparen boolstr rparen lbrace id assign literal semi rbrace rbrace else lbrace vtype id semi rbrace return character semi rbrace $"
+tokens = "vtype id assign lparen num rparen multdiv num addsub num semi vtype id lparen vtype id comma vtype id comma vtype id rparen lbrace id assign boolstr semi return character semi rbrace $"
 #tokens = 'vtype id semi $'
 splitedToken = tokens.split(" ") #띄어쓰기로 token 구분하기
 
 parseTreeStack = slrParser(splitedToken)[0]
 
-#print(parseTreeStack)
+print(parseTreeStack)
 #print(len(parseTreeStack))
 #print(parseTreeStack[0][len(parseTreeStack[0])-1])
 
-parseTreeString = createParseTree(parseTreeStack)
-tree = Tree.fromstring(parseTreeString)
+#parseTreeString = createParseTree(parseTreeStack)
+#print(parseTreeString)
+tree = Tree.fromstring(createParseTree(parseTreeStack))
 tree.draw()
 
 
