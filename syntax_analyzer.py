@@ -1,4 +1,5 @@
 # import nltk
+import sys
 from nltk import Tree
 
 # parsing_table { (current_state, symbol) : (action, value) ... (..:..) ... }
@@ -296,36 +297,41 @@ context_free_grammar = [
   [["RETURN"], ["return", "RHS", "semi"]]
 ]
 
-
-isAccepted = False
+isAccepted = True
 
 def slrParser(tokens):
   numOfStep = 0
   parseTreeStack=[]
   stateStack = []
-  stateStack.append(0) #initStateStack 초기 state는 0임
+  stateStack.append(0) # initStateStack 초기 state는 0임
   index = 0
   nextSymbol = tokens[index] # 초기 symbol은 맨 첫번째 토큰임
   while(True):
     numOfStep += 1
-    currentState = stateStack[len(stateStack)-1] #stateStack의 top
+    currentState = stateStack[len(stateStack)-1] # stateStack의 top
     
 
     
     if (currentState, nextSymbol) not in parsing_table: #만약, 해당하는 slr 테이블 칸에 값이 없다면, 에러 발생
-      print("step",numOfStep,"[Parsing Error] : value is not exist in state:",currentState,", action:",nextSymbol)
-      break
+      print('\033[1;91m reject !')
+      print(" step",numOfStep,"[Parsing Error] :\033[0;91m value is not exist in state:",currentState,", nextSymbol:",nextSymbol)
+      print("\033[1;91m remain input string :\033[0;91m ", end='')
+      for i in tokens[index:]:
+          print(i, end=' ')
+      print("\033[0m ")
+      isAccepted = False
+      exit(1)
     action, value = parsing_table[currentState, nextSymbol]
     
-    #사용자에게 parsing stack과 trace를 보여주기 위한 콘솔 출력문 
+    # 사용자에게 parsing stack과 trace를 보여주기 위한 콘솔 출력문
     print("---------step",numOfStep,"-------") 
     print("{current state:",currentState, "next symbol:",nextSymbol,"}")
     print("{",action , " : " , value, " }")
-    #print("parseTreeStack",parseTreeStack)
-    #print("stateStack", stateStack)
+    # print("parseTreeStack",parseTreeStack)
+    # print("stateStack", stateStack)
     print("")
     if action == "shift":
-      parseTreeStack.append([nextSymbol]) # shift를 하면 새로운 terminal이 들어옴 -> 즉 leaf 노드임
+      parseTreeStack.append([nextSymbol])   # shift를 하면 새로운 terminal이 들어옴 -> 즉 leaf 노드임
       index +=1
       nextSymbol = tokens[index]
       stateStack.append(value)
@@ -333,7 +339,7 @@ def slrParser(tokens):
       sizeOfalpha = len(context_free_grammar[value][1]) # A -> alpha alpha의 길이
       
       if context_free_grammar[value][1][0] != '':
-        tmp = [] #임시 스택
+        tmp = []    # 임시 스택
         
         for i in range(len(parseTreeStack)-sizeOfalpha, len(parseTreeStack)):
           tmp.append(parseTreeStack[i])
@@ -341,28 +347,38 @@ def slrParser(tokens):
         
         for i in range(0, sizeOfalpha):
           parseTreeStack.pop()
-          stateStack.pop() #alpha의 길이만큼 stateStack을 pop시켜야 함
-        parseTreeStack.append(tmp) #새로운 트리를 parseTree에 추가시킴
-      else: #alpha가 엡실론인 경우
+          stateStack.pop()  # alpha의 길이만큼 stateStack을 pop시켜야 함
+        parseTreeStack.append(tmp)  # 새로운 트리를 parseTree에 추가시킴
+      else: # alpha가 엡실론인 경우
         tmp = [context_free_grammar[value][0][0]]
         parseTreeStack.append(tmp)
         
-      #goto(pop이후 stateStack.top, A)를 stateStack에 push , 이때 A는 A -> alpha에서의 A임
-      
+      # goto(pop이후 stateStack.top, A)를 stateStack에 push , 이때 A는 A -> alpha에서의 A임
+
       top = stateStack[len(stateStack)-1]
       A = context_free_grammar[value][0][0]
-      #print(top, A)
-      goto, gotoState = parsing_table[top,A]
-      #print("gotoState:",gotoState)
+      # print(top, A)
+      goto, gotoState = parsing_table[top, A]
+      # print("gotoState:",gotoState)
       stateStack.append(gotoState)
+
+      numOfStep += 1
+
+      # 사용자에게 parsing stack과 trace를 보여주기 위한 콘솔 출력문
+      print("---------step", numOfStep, "-------")
+      print("{current state:", top, "next symbol:", nextSymbol, "}")
+      print("{", goto, " : ", gotoState, " }")
+      # print("parseTreeStack",parseTreeStack)
+      # print("stateStack", stateStack)
+      print("")
       
       
       
-    else: #accept 되었을 때
-      print('accept !')
+    else:   # accept 되었을 때
+      print('\033[1;92m accept !\033[0;92m')
       return parseTreeStack
 
-#nltk를 통해 gui를 출력하기 위한 문자열 생성 함수 (재귀로 동작함)
+# nltk를 통해 gui를 출력하기 위한 문자열 생성 함수 (재귀로 동작함)
 def createParseTree(parseTreeStack): 
   parseTree = '('
   parseTree += parseTreeStack[len(parseTreeStack)-1]
@@ -373,24 +389,47 @@ def createParseTree(parseTreeStack):
   return parseTree
 
 
-#error case
-#tokens = "vtype id assign character semi vtype id lparen vtype id comma vtype id comma vtype id rparen lbrace if lparen boolstr comp boolstr rparen lbrace while lparen boolstr rparen lbrace id assign literal semi rbrace rbrace else lbrace vtype id semi rbrace return character semi $"
+def read_from_file(file_name):
+    try:
+        with open(file_name, 'r', encoding='utf-8') as file:
+            data = file.read()
+        return data
+    except FileNotFoundError:
+        print(f"{file_name} does not exist.")
+        return None
 
-#accept case
-#tokens = "vtype id assign character semi vtype id lparen vtype id comma vtype id comma vtype id rparen lbrace if lparen boolstr comp boolstr rparen lbrace while lparen boolstr rparen lbrace id assign literal semi rbrace rbrace else lbrace vtype id semi rbrace return character semi rbrace $"
-tokens = "vtype id assign lparen num rparen multdiv num addsub num semi vtype id lparen vtype id comma vtype id comma vtype id rparen lbrace id assign boolstr semi return character semi rbrace $"
-#tokens = 'vtype id semi $'
-splitedToken = tokens.split(" ") #띄어쓰기로 token 구분하기
+def main(input_file):
+    tokens = read_from_file(input_file)
+    if tokens is None:
+        exit(1)
 
-parseTreeStack = slrParser(splitedToken)[0]
+    splitedToken = tokens.split(" ")  # 띄어쓰기로 token 구분하기
 
-print(parseTreeStack)
-#print(len(parseTreeStack))
-#print(parseTreeStack[0][len(parseTreeStack[0])-1])
+    parseTreeStack = slrParser(splitedToken)[0]
 
-#parseTreeString = createParseTree(parseTreeStack)
-#print(parseTreeString)
-tree = Tree.fromstring(createParseTree(parseTreeStack))
-tree.draw()
+    # print(len(parseTreeStack))
+    # print(parseTreeStack[0][len(parseTreeStack[0])-1])
+
+    # parseTreeString = createParseTree(parseTreeStack)
+    # print(parseTreeString)
+    if isAccepted:
+        print(parseTreeStack)
+        print("\033[0m")
+        tree = Tree.fromstring(createParseTree(parseTreeStack))
+        tree.draw()
+
+if __name__ == "__main__":
+    if len(sys.argv) != 2:
+        print("Input Format: python syntax_analyzer.py [input_file.txt]")
+    else:
+        input_file = sys.argv[1]
+        main(input_file)
 
 
+# error case
+# tokens = "vtype id assign character semi vtype id lparen vtype id comma vtype id comma vtype id rparen lbrace if lparen boolstr comp boolstr rparen lbrace while lparen boolstr rparen lbrace id assign literal semi rbrace rbrace else lbrace vtype id semi rbrace return character semi $"
+# tokens = "vtype id assign character id vtype id assign character $"
+# accept case
+# tokens = "vtype id assign character semi vtype id lparen vtype id comma vtype id comma vtype id rparen lbrace if lparen boolstr comp boolstr rparen lbrace while lparen boolstr rparen lbrace id assign literal semi rbrace rbrace else lbrace vtype id semi rbrace return character semi rbrace $"
+# tokens = "vtype id assign lparen num rparen multdiv num addsub num semi vtype id lparen vtype id comma vtype id comma vtype id rparen lbrace id assign boolstr semi return character semi rbrace $"
+    # tokens = 'vtype id semi $'
