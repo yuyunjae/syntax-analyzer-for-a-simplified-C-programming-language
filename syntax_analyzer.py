@@ -425,11 +425,5 @@ if __name__ == "__main__":
         input_file = sys.argv[1]
         main(input_file)
 
-
-# error case
-# tokens = "vtype id assign character semi vtype id lparen vtype id comma vtype id comma vtype id rparen lbrace if lparen boolstr comp boolstr rparen lbrace while lparen boolstr rparen lbrace id assign literal semi rbrace rbrace else lbrace vtype id semi rbrace return character semi $"
 # tokens = "vtype id assign character id vtype id assign character $"
-# accept case
-# tokens = "vtype id assign character semi vtype id lparen vtype id comma vtype id comma vtype id rparen lbrace if lparen boolstr comp boolstr rparen lbrace while lparen boolstr rparen lbrace id assign literal semi rbrace rbrace else lbrace vtype id semi rbrace return character semi rbrace $"
-# tokens = "vtype id assign lparen num rparen multdiv num addsub num semi vtype id lparen vtype id comma vtype id comma vtype id rparen lbrace id assign boolstr semi return character semi rbrace $"
-    # tokens = 'vtype id semi $'
+
