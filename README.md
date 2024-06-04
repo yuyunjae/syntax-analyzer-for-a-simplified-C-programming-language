@@ -1,8 +1,12 @@
 # syntax-analyzer-for-a-simplified-C-programming-language
 <br>
-nltk 라이브러리 설치방법<br>
+<h1>nltk 라이브러리 설치방법</h1><br>
 pip install numpy<br>
 pip install nltk<br>
+<h1>프로그램 실행방법</h1><br>
+파이썬이 설치되어 있다면, <br>
+terminal에서 python syntax_analyzer.py [테스트 하고자 하는 파일 ex) accept_case_1.txt]<br>
+위와 같은 명령어로 parsing 결과를 확인 할 수 있습니다.
 <br>
 <h1>CFG </h1>
 <br>
