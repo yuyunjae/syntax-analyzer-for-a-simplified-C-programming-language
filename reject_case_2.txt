@@ -1,0 +1,1 @@
+vtype id assign character id vtype id assign character $
