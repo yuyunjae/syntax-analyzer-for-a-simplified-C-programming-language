@@ -1,5 +1,8 @@
 # syntax-analyzer-for-a-simplified-C-programming-language
-
+<br>
+nltk 라이브러리 설치방법<br>
+pip install numpy<br>
+pip install nltk<br>
 <br>
 <h1>CFG </h1>
 <br>
