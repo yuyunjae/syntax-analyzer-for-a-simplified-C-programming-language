@@ -319,6 +319,7 @@ def slrParser(tokens):
       for i in tokens[index:]:
           print(i, end=' ')
       print("\033[0m ")
+      global isAccepted
       isAccepted = False
       exit(1)
     action, value = parsing_table[currentState, nextSymbol]
@@ -327,8 +328,6 @@ def slrParser(tokens):
     print("---------step",numOfStep,"-------") 
     print("{current state:",currentState, "next symbol:",nextSymbol,"}")
     print("{",action , " : " , value, " }")
-    # print("parseTreeStack",parseTreeStack)
-    # print("stateStack", stateStack)
     print("")
     if action == "shift":
       parseTreeStack.append([nextSymbol])   # shift를 하면 새로운 terminal이 들어옴 -> 즉 leaf 노드임
@@ -357,9 +356,7 @@ def slrParser(tokens):
 
       top = stateStack[len(stateStack)-1]
       A = context_free_grammar[value][0][0]
-      # print(top, A)
       goto, gotoState = parsing_table[top, A]
-      # print("gotoState:",gotoState)
       stateStack.append(gotoState)
 
       numOfStep += 1
@@ -368,8 +365,6 @@ def slrParser(tokens):
       print("---------step", numOfStep, "-------")
       print("{current state:", top, "next symbol:", nextSymbol, "}")
       print("{", goto, " : ", gotoState, " }")
-      # print("parseTreeStack",parseTreeStack)
-      # print("stateStack", stateStack)
       print("")
       
       
@@ -377,6 +372,7 @@ def slrParser(tokens):
     else:   # accept 되었을 때
       print('\033[1;92m accept !\033[0;92m')
       return parseTreeStack
+
 
 # nltk를 통해 gui를 출력하기 위한 문자열 생성 함수 (재귀로 동작함)
 def createParseTree(parseTreeStack): # list 형태를 draw하기 위해 () 괄호에 포함되어 있는 형태의 string으로 변경
@@ -398,6 +394,7 @@ def read_from_file(file_name):
         print(f"{file_name} does not exist.")
         return None
 
+
 def main(input_file):
     tokens = read_from_file(input_file)
     if tokens is None:
@@ -407,16 +404,12 @@ def main(input_file):
 
     parseTreeStack = slrParser(splitedToken)[0]
 
-    # print(len(parseTreeStack))
-    # print(parseTreeStack[0][len(parseTreeStack[0])-1])
-
-    # parseTreeString = createParseTree(parseTreeStack)
-    # print(parseTreeString)
     if isAccepted:
         print(parseTreeStack) # 터미널에 파싱 되어 있는 문자열 구조 출력 (list 형태)
         print("\033[0m")
         tree = Tree.fromstring(createParseTree(parseTreeStack))
         tree.draw() # gui로 트리 구조 생성
+
 
 if __name__ == "__main__":
     if len(sys.argv) != 2:
@@ -424,6 +417,4 @@ if __name__ == "__main__":
     else:
         input_file = sys.argv[1]
         main(input_file)
-
-# tokens = "vtype id assign character id vtype id assign character $"
 
