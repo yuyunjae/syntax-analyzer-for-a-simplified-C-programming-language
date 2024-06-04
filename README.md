@@ -1,1 +1,0 @@
-# syntax-analyzer-for-a-simplified-C-programming-language
