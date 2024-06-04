@@ -379,7 +379,7 @@ def slrParser(tokens):
       return parseTreeStack
 
 # nltk를 통해 gui를 출력하기 위한 문자열 생성 함수 (재귀로 동작함)
-def createParseTree(parseTreeStack): 
+def createParseTree(parseTreeStack): # list 형태를 draw하기 위해 () 괄호에 포함되어 있는 형태의 string으로 변경
   parseTree = '('
   parseTree += parseTreeStack[len(parseTreeStack)-1]
   if len(parseTreeStack)>=2:
@@ -413,10 +413,10 @@ def main(input_file):
     # parseTreeString = createParseTree(parseTreeStack)
     # print(parseTreeString)
     if isAccepted:
-        print(parseTreeStack)
+        print(parseTreeStack) # 터미널에 파싱 되어 있는 문자열 구조 출력 (list 형태)
         print("\033[0m")
         tree = Tree.fromstring(createParseTree(parseTreeStack))
-        tree.draw()
+        tree.draw() # gui로 트리 구조 생성
 
 if __name__ == "__main__":
     if len(sys.argv) != 2:
