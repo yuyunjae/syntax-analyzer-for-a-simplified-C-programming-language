@@ -1,0 +1,367 @@
+---------step 1 -------
+{current state: 0 next symbol: vtype }
+{ shift  :  4  }
+
+---------step 2 -------
+{current state: 4 next symbol: id }
+{ shift  :  7  }
+
+---------step 3 -------
+{current state: 7 next symbol: assign }
+{ shift  :  11  }
+
+---------step 4 -------
+{current state: 11 next symbol: lparen }
+{ shift  :  22  }
+
+---------step 5 -------
+{current state: 22 next symbol: num }
+{ shift  :  24  }
+
+---------step 6 -------
+{current state: 24 next symbol: rparen }
+{ reduce  :  17  }
+
+---------step 7 -------
+{current state: 22 next symbol: rparen }
+{ goto  :  21  }
+
+---------step 8 -------
+{current state: 21 next symbol: rparen }
+{ reduce  :  14  }
+
+---------step 9 -------
+{current state: 22 next symbol: rparen }
+{ goto  :  20  }
+
+---------step 10 -------
+{current state: 20 next symbol: rparen }
+{ reduce  :  12  }
+
+---------step 11 -------
+{current state: 22 next symbol: rparen }
+{ goto  :  29  }
+
+---------step 12 -------
+{current state: 29 next symbol: rparen }
+{ shift  :  35  }
+
+---------step 13 -------
+{current state: 35 next symbol: multdiv }
+{ reduce  :  15  }
+
+---------step 14 -------
+{current state: 11 next symbol: multdiv }
+{ goto  :  21  }
+
+---------step 15 -------
+{current state: 21 next symbol: multdiv }
+{ shift  :  28  }
+
+---------step 16 -------
+{current state: 28 next symbol: num }
+{ shift  :  24  }
+
+---------step 17 -------
+{current state: 24 next symbol: addsub }
+{ reduce  :  17  }
+
+---------step 18 -------
+{current state: 28 next symbol: addsub }
+{ goto  :  21  }
+
+---------step 19 -------
+{current state: 21 next symbol: addsub }
+{ reduce  :  14  }
+
+---------step 20 -------
+{current state: 28 next symbol: addsub }
+{ goto  :  34  }
+
+---------step 21 -------
+{current state: 34 next symbol: addsub }
+{ reduce  :  13  }
+
+---------step 22 -------
+{current state: 11 next symbol: addsub }
+{ goto  :  20  }
+
+---------step 23 -------
+{current state: 20 next symbol: addsub }
+{ shift  :  27  }
+
+---------step 24 -------
+{current state: 27 next symbol: num }
+{ shift  :  24  }
+
+---------step 25 -------
+{current state: 24 next symbol: semi }
+{ reduce  :  17  }
+
+---------step 26 -------
+{current state: 27 next symbol: semi }
+{ goto  :  21  }
+
+---------step 27 -------
+{current state: 21 next symbol: semi }
+{ reduce  :  14  }
+
+---------step 28 -------
+{current state: 27 next symbol: semi }
+{ goto  :  20  }
+
+---------step 29 -------
+{current state: 20 next symbol: semi }
+{ reduce  :  12  }
+
+---------step 30 -------
+{current state: 27 next symbol: semi }
+{ goto  :  33  }
+
+---------step 31 -------
+{current state: 33 next symbol: semi }
+{ reduce  :  11  }
+
+---------step 32 -------
+{current state: 11 next symbol: semi }
+{ goto  :  16  }
+
+---------step 33 -------
+{current state: 16 next symbol: semi }
+{ reduce  :  7  }
+
+---------step 34 -------
+{current state: 11 next symbol: semi }
+{ goto  :  15  }
+
+---------step 35 -------
+{current state: 15 next symbol: semi }
+{ reduce  :  6  }
+
+---------step 36 -------
+{current state: 4 next symbol: semi }
+{ goto  :  8  }
+
+---------step 37 -------
+{current state: 8 next symbol: semi }
+{ shift  :  12  }
+
+---------step 38 -------
+{current state: 12 next symbol: vtype }
+{ reduce  :  5  }
+
+---------step 39 -------
+{current state: 0 next symbol: vtype }
+{ goto  :  2  }
+
+---------step 40 -------
+{current state: 2 next symbol: vtype }
+{ shift  :  4  }
+
+---------step 41 -------
+{current state: 4 next symbol: id }
+{ shift  :  7  }
+
+---------step 42 -------
+{current state: 7 next symbol: lparen }
+{ shift  :  10  }
+
+---------step 43 -------
+{current state: 10 next symbol: vtype }
+{ shift  :  14  }
+
+---------step 44 -------
+{current state: 14 next symbol: id }
+{ shift  :  26  }
+
+---------step 45 -------
+{current state: 26 next symbol: comma }
+{ shift  :  32  }
+
+---------step 46 -------
+{current state: 32 next symbol: vtype }
+{ shift  :  44  }
+
+---------step 47 -------
+{current state: 44 next symbol: id }
+{ shift  :  52  }
+
+---------step 48 -------
+{current state: 52 next symbol: comma }
+{ shift  :  32  }
+
+---------step 49 -------
+{current state: 32 next symbol: vtype }
+{ shift  :  44  }
+
+---------step 50 -------
+{current state: 44 next symbol: id }
+{ shift  :  52  }
+
+---------step 51 -------
+{current state: 52 next symbol: rparen }
+{ reduce  :  22  }
+
+---------step 52 -------
+{current state: 52 next symbol: rparen }
+{ goto  :  59  }
+
+---------step 53 -------
+{current state: 59 next symbol: rparen }
+{ reduce  :  21  }
+
+---------step 54 -------
+{current state: 52 next symbol: rparen }
+{ goto  :  59  }
+
+---------step 55 -------
+{current state: 59 next symbol: rparen }
+{ reduce  :  21  }
+
+---------step 56 -------
+{current state: 26 next symbol: rparen }
+{ goto  :  31  }
+
+---------step 57 -------
+{current state: 31 next symbol: rparen }
+{ reduce  :  19  }
+
+---------step 58 -------
+{current state: 10 next symbol: rparen }
+{ goto  :  13  }
+
+---------step 59 -------
+{current state: 13 next symbol: rparen }
+{ shift  :  25  }
+
+---------step 60 -------
+{current state: 25 next symbol: lbrace }
+{ shift  :  30  }
+
+---------step 61 -------
+{current state: 30 next symbol: id }
+{ shift  :  43  }
+
+---------step 62 -------
+{current state: 43 next symbol: assign }
+{ shift  :  11  }
+
+---------step 63 -------
+{current state: 11 next symbol: boolstr }
+{ shift  :  19  }
+
+---------step 64 -------
+{current state: 19 next symbol: semi }
+{ reduce  :  10  }
+
+---------step 65 -------
+{current state: 11 next symbol: semi }
+{ goto  :  15  }
+
+---------step 66 -------
+{current state: 15 next symbol: semi }
+{ reduce  :  6  }
+
+---------step 67 -------
+{current state: 30 next symbol: semi }
+{ goto  :  39  }
+
+---------step 68 -------
+{current state: 39 next symbol: semi }
+{ shift  :  48  }
+
+---------step 69 -------
+{current state: 48 next symbol: return }
+{ reduce  :  26  }
+
+---------step 70 -------
+{current state: 30 next symbol: return }
+{ goto  :  37  }
+
+---------step 71 -------
+{current state: 37 next symbol: return }
+{ reduce  :  24  }
+
+---------step 72 -------
+{current state: 37 next symbol: return }
+{ goto  :  47  }
+
+---------step 73 -------
+{current state: 47 next symbol: return }
+{ reduce  :  23  }
+
+---------step 74 -------
+{current state: 30 next symbol: return }
+{ goto  :  36  }
+
+---------step 75 -------
+{current state: 36 next symbol: return }
+{ shift  :  46  }
+
+---------step 76 -------
+{current state: 46 next symbol: character }
+{ shift  :  18  }
+
+---------step 77 -------
+{current state: 18 next symbol: semi }
+{ reduce  :  9  }
+
+---------step 78 -------
+{current state: 46 next symbol: semi }
+{ goto  :  54  }
+
+---------step 79 -------
+{current state: 54 next symbol: semi }
+{ shift  :  60  }
+
+---------step 80 -------
+{current state: 60 next symbol: rbrace }
+{ reduce  :  34  }
+
+---------step 81 -------
+{current state: 36 next symbol: rbrace }
+{ goto  :  45  }
+
+---------step 82 -------
+{current state: 45 next symbol: rbrace }
+{ shift  :  53  }
+
+---------step 83 -------
+{current state: 53 next symbol: $ }
+{ reduce  :  18  }
+
+---------step 84 -------
+{current state: 2 next symbol: $ }
+{ goto  :  3  }
+
+---------step 85 -------
+{current state: 3 next symbol: $ }
+{ reduce  :  3  }
+
+---------step 86 -------
+{current state: 3 next symbol: $ }
+{ goto  :  6  }
+
+---------step 87 -------
+{current state: 6 next symbol: $ }
+{ reduce  :  2  }
+
+---------step 88 -------
+{current state: 2 next symbol: $ }
+{ goto  :  5  }
+
+---------step 89 -------
+{current state: 5 next symbol: $ }
+{ reduce  :  1  }
+
+---------step 90 -------
+{current state: 0 next symbol: $ }
+{ goto  :  1  }
+
+---------step 91 -------
+{current state: 1 next symbol: $ }
+{ accept  :  -1  }
+
+[1;92m accept ![0;92m
+[[['vtype'], [['id'], ['assign'], [[[[['lparen'], [[[['num'], 'FEXPR'], 'TEXPR'], 'EXPR'], ['rparen'], 'FEXPR'], ['multdiv'], [[['num'], 'FEXPR'], 'TEXPR'], 'TEXPR'], ['addsub'], [[[['num'], 'FEXPR'], 'TEXPR'], 'EXPR'], 'EXPR'], 'RHS'], 'ASSIGN'], ['semi'], 'VDECL'], [[['vtype'], ['id'], ['lparen'], [['vtype'], ['id'], [['comma'], ['vtype'], ['id'], [['comma'], ['vtype'], ['id'], ['MOREARGS'], 'MOREARGS'], 'MOREARGS'], 'ARG'], ['rparen'], ['lbrace'], [[[['id'], ['assign'], [['boolstr'], 'RHS'], 'ASSIGN'], ['semi'], 'STMT'], ['BLOCK'], 'BLOCK'], [['return'], [['character'], 'RHS'], ['semi'], 'RETURN'], ['rbrace'], 'FDECL'], ['CODE'], 'CODE'], 'CODE']
+[0m

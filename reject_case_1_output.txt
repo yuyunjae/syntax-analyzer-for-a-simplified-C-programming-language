@@ -1,0 +1,423 @@
+---------step 1 -------
+{current state: 0 next symbol: vtype }
+{ shift  :  4  }
+
+---------step 2 -------
+{current state: 4 next symbol: id }
+{ shift  :  7  }
+
+---------step 3 -------
+{current state: 7 next symbol: assign }
+{ shift  :  11  }
+
+---------step 4 -------
+{current state: 11 next symbol: character }
+{ shift  :  18  }
+
+---------step 5 -------
+{current state: 18 next symbol: semi }
+{ reduce  :  9  }
+
+---------step 6 -------
+{current state: 11 next symbol: semi }
+{ goto  :  15  }
+
+---------step 7 -------
+{current state: 15 next symbol: semi }
+{ reduce  :  6  }
+
+---------step 8 -------
+{current state: 4 next symbol: semi }
+{ goto  :  8  }
+
+---------step 9 -------
+{current state: 8 next symbol: semi }
+{ shift  :  12  }
+
+---------step 10 -------
+{current state: 12 next symbol: vtype }
+{ reduce  :  5  }
+
+---------step 11 -------
+{current state: 0 next symbol: vtype }
+{ goto  :  2  }
+
+---------step 12 -------
+{current state: 2 next symbol: vtype }
+{ shift  :  4  }
+
+---------step 13 -------
+{current state: 4 next symbol: id }
+{ shift  :  7  }
+
+---------step 14 -------
+{current state: 7 next symbol: lparen }
+{ shift  :  10  }
+
+---------step 15 -------
+{current state: 10 next symbol: vtype }
+{ shift  :  14  }
+
+---------step 16 -------
+{current state: 14 next symbol: id }
+{ shift  :  26  }
+
+---------step 17 -------
+{current state: 26 next symbol: comma }
+{ shift  :  32  }
+
+---------step 18 -------
+{current state: 32 next symbol: vtype }
+{ shift  :  44  }
+
+---------step 19 -------
+{current state: 44 next symbol: id }
+{ shift  :  52  }
+
+---------step 20 -------
+{current state: 52 next symbol: comma }
+{ shift  :  32  }
+
+---------step 21 -------
+{current state: 32 next symbol: vtype }
+{ shift  :  44  }
+
+---------step 22 -------
+{current state: 44 next symbol: id }
+{ shift  :  52  }
+
+---------step 23 -------
+{current state: 52 next symbol: rparen }
+{ reduce  :  22  }
+
+---------step 24 -------
+{current state: 52 next symbol: rparen }
+{ goto  :  59  }
+
+---------step 25 -------
+{current state: 59 next symbol: rparen }
+{ reduce  :  21  }
+
+---------step 26 -------
+{current state: 52 next symbol: rparen }
+{ goto  :  59  }
+
+---------step 27 -------
+{current state: 59 next symbol: rparen }
+{ reduce  :  21  }
+
+---------step 28 -------
+{current state: 26 next symbol: rparen }
+{ goto  :  31  }
+
+---------step 29 -------
+{current state: 31 next symbol: rparen }
+{ reduce  :  19  }
+
+---------step 30 -------
+{current state: 10 next symbol: rparen }
+{ goto  :  13  }
+
+---------step 31 -------
+{current state: 13 next symbol: rparen }
+{ shift  :  25  }
+
+---------step 32 -------
+{current state: 25 next symbol: lbrace }
+{ shift  :  30  }
+
+---------step 33 -------
+{current state: 30 next symbol: if }
+{ shift  :  40  }
+
+---------step 34 -------
+{current state: 40 next symbol: lparen }
+{ shift  :  49  }
+
+---------step 35 -------
+{current state: 49 next symbol: boolstr }
+{ shift  :  57  }
+
+---------step 36 -------
+{current state: 57 next symbol: comp }
+{ reduce  :  31  }
+
+---------step 37 -------
+{current state: 49 next symbol: comp }
+{ goto  :  56  }
+
+---------step 38 -------
+{current state: 56 next symbol: comp }
+{ shift  :  62  }
+
+---------step 39 -------
+{current state: 62 next symbol: boolstr }
+{ shift  :  57  }
+
+---------step 40 -------
+{current state: 57 next symbol: rparen }
+{ reduce  :  31  }
+
+---------step 41 -------
+{current state: 62 next symbol: rparen }
+{ goto  :  56  }
+
+---------step 42 -------
+{current state: 56 next symbol: rparen }
+{ reduce  :  30  }
+
+---------step 43 -------
+{current state: 62 next symbol: rparen }
+{ goto  :  65  }
+
+---------step 44 -------
+{current state: 65 next symbol: rparen }
+{ reduce  :  29  }
+
+---------step 45 -------
+{current state: 49 next symbol: rparen }
+{ goto  :  55  }
+
+---------step 46 -------
+{current state: 55 next symbol: rparen }
+{ shift  :  61  }
+
+---------step 47 -------
+{current state: 61 next symbol: lbrace }
+{ shift  :  64  }
+
+---------step 48 -------
+{current state: 64 next symbol: while }
+{ shift  :  41  }
+
+---------step 49 -------
+{current state: 41 next symbol: lparen }
+{ shift  :  50  }
+
+---------step 50 -------
+{current state: 50 next symbol: boolstr }
+{ shift  :  57  }
+
+---------step 51 -------
+{current state: 57 next symbol: rparen }
+{ reduce  :  31  }
+
+---------step 52 -------
+{current state: 50 next symbol: rparen }
+{ goto  :  56  }
+
+---------step 53 -------
+{current state: 56 next symbol: rparen }
+{ reduce  :  30  }
+
+---------step 54 -------
+{current state: 50 next symbol: rparen }
+{ goto  :  58  }
+
+---------step 55 -------
+{current state: 58 next symbol: rparen }
+{ shift  :  63  }
+
+---------step 56 -------
+{current state: 63 next symbol: lbrace }
+{ shift  :  66  }
+
+---------step 57 -------
+{current state: 66 next symbol: id }
+{ shift  :  43  }
+
+---------step 58 -------
+{current state: 43 next symbol: assign }
+{ shift  :  11  }
+
+---------step 59 -------
+{current state: 11 next symbol: literal }
+{ shift  :  17  }
+
+---------step 60 -------
+{current state: 17 next symbol: semi }
+{ reduce  :  8  }
+
+---------step 61 -------
+{current state: 11 next symbol: semi }
+{ goto  :  15  }
+
+---------step 62 -------
+{current state: 15 next symbol: semi }
+{ reduce  :  6  }
+
+---------step 63 -------
+{current state: 66 next symbol: semi }
+{ goto  :  39  }
+
+---------step 64 -------
+{current state: 39 next symbol: semi }
+{ shift  :  48  }
+
+---------step 65 -------
+{current state: 48 next symbol: rbrace }
+{ reduce  :  26  }
+
+---------step 66 -------
+{current state: 66 next symbol: rbrace }
+{ goto  :  37  }
+
+---------step 67 -------
+{current state: 37 next symbol: rbrace }
+{ reduce  :  24  }
+
+---------step 68 -------
+{current state: 37 next symbol: rbrace }
+{ goto  :  47  }
+
+---------step 69 -------
+{current state: 47 next symbol: rbrace }
+{ reduce  :  23  }
+
+---------step 70 -------
+{current state: 66 next symbol: rbrace }
+{ goto  :  68  }
+
+---------step 71 -------
+{current state: 68 next symbol: rbrace }
+{ shift  :  70  }
+
+---------step 72 -------
+{current state: 70 next symbol: rbrace }
+{ reduce  :  28  }
+
+---------step 73 -------
+{current state: 64 next symbol: rbrace }
+{ goto  :  37  }
+
+---------step 74 -------
+{current state: 37 next symbol: rbrace }
+{ reduce  :  24  }
+
+---------step 75 -------
+{current state: 37 next symbol: rbrace }
+{ goto  :  47  }
+
+---------step 76 -------
+{current state: 47 next symbol: rbrace }
+{ reduce  :  23  }
+
+---------step 77 -------
+{current state: 64 next symbol: rbrace }
+{ goto  :  67  }
+
+---------step 78 -------
+{current state: 67 next symbol: rbrace }
+{ shift  :  69  }
+
+---------step 79 -------
+{current state: 69 next symbol: else }
+{ shift  :  72  }
+
+---------step 80 -------
+{current state: 72 next symbol: lbrace }
+{ shift  :  73  }
+
+---------step 81 -------
+{current state: 73 next symbol: vtype }
+{ shift  :  42  }
+
+---------step 82 -------
+{current state: 42 next symbol: id }
+{ shift  :  51  }
+
+---------step 83 -------
+{current state: 51 next symbol: semi }
+{ shift  :  9  }
+
+---------step 84 -------
+{current state: 9 next symbol: rbrace }
+{ reduce  :  4  }
+
+---------step 85 -------
+{current state: 73 next symbol: rbrace }
+{ goto  :  38  }
+
+---------step 86 -------
+{current state: 38 next symbol: rbrace }
+{ reduce  :  25  }
+
+---------step 87 -------
+{current state: 73 next symbol: rbrace }
+{ goto  :  37  }
+
+---------step 88 -------
+{current state: 37 next symbol: rbrace }
+{ reduce  :  24  }
+
+---------step 89 -------
+{current state: 37 next symbol: rbrace }
+{ goto  :  47  }
+
+---------step 90 -------
+{current state: 47 next symbol: rbrace }
+{ reduce  :  23  }
+
+---------step 91 -------
+{current state: 73 next symbol: rbrace }
+{ goto  :  74  }
+
+---------step 92 -------
+{current state: 74 next symbol: rbrace }
+{ shift  :  75  }
+
+---------step 93 -------
+{current state: 75 next symbol: return }
+{ reduce  :  32  }
+
+---------step 94 -------
+{current state: 69 next symbol: return }
+{ goto  :  71  }
+
+---------step 95 -------
+{current state: 71 next symbol: return }
+{ reduce  :  27  }
+
+---------step 96 -------
+{current state: 30 next symbol: return }
+{ goto  :  37  }
+
+---------step 97 -------
+{current state: 37 next symbol: return }
+{ reduce  :  24  }
+
+---------step 98 -------
+{current state: 37 next symbol: return }
+{ goto  :  47  }
+
+---------step 99 -------
+{current state: 47 next symbol: return }
+{ reduce  :  23  }
+
+---------step 100 -------
+{current state: 30 next symbol: return }
+{ goto  :  36  }
+
+---------step 101 -------
+{current state: 36 next symbol: return }
+{ shift  :  46  }
+
+---------step 102 -------
+{current state: 46 next symbol: character }
+{ shift  :  18  }
+
+---------step 103 -------
+{current state: 18 next symbol: semi }
+{ reduce  :  9  }
+
+---------step 104 -------
+{current state: 46 next symbol: semi }
+{ goto  :  54  }
+
+---------step 105 -------
+{current state: 54 next symbol: semi }
+{ shift  :  60  }
+
+[1;91m reject !
+ step 106 [Parsing Error] :[0;91m value is not exist in state: 60 , nextSymbol: $
+[1;91m remain input string :[0;91m $ [0m 

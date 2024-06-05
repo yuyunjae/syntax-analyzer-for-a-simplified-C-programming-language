@@ -1,0 +1,7 @@
+---------step 1 -------
+{current state: 0 next symbol: vtype }
+{ shift  :  4  }
+
+[1;91m reject !
+ step 2 [Parsing Error] :[0;91m value is not exist in state: 4 , nextSymbol: ids
+[1;91m remain input string :[0;91m ids semi $ [0m 

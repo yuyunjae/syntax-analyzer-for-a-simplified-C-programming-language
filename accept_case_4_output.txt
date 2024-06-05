@@ -1,0 +1,1015 @@
+---------step 1 -------
+{current state: 0 next symbol: vtype }
+{ shift  :  4  }
+
+---------step 2 -------
+{current state: 4 next symbol: id }
+{ shift  :  7  }
+
+---------step 3 -------
+{current state: 7 next symbol: lparen }
+{ shift  :  10  }
+
+---------step 4 -------
+{current state: 10 next symbol: vtype }
+{ shift  :  14  }
+
+---------step 5 -------
+{current state: 14 next symbol: id }
+{ shift  :  26  }
+
+---------step 6 -------
+{current state: 26 next symbol: comma }
+{ shift  :  32  }
+
+---------step 7 -------
+{current state: 32 next symbol: vtype }
+{ shift  :  44  }
+
+---------step 8 -------
+{current state: 44 next symbol: id }
+{ shift  :  52  }
+
+---------step 9 -------
+{current state: 52 next symbol: comma }
+{ shift  :  32  }
+
+---------step 10 -------
+{current state: 32 next symbol: vtype }
+{ shift  :  44  }
+
+---------step 11 -------
+{current state: 44 next symbol: id }
+{ shift  :  52  }
+
+---------step 12 -------
+{current state: 52 next symbol: rparen }
+{ reduce  :  22  }
+
+---------step 13 -------
+{current state: 52 next symbol: rparen }
+{ goto  :  59  }
+
+---------step 14 -------
+{current state: 59 next symbol: rparen }
+{ reduce  :  21  }
+
+---------step 15 -------
+{current state: 52 next symbol: rparen }
+{ goto  :  59  }
+
+---------step 16 -------
+{current state: 59 next symbol: rparen }
+{ reduce  :  21  }
+
+---------step 17 -------
+{current state: 26 next symbol: rparen }
+{ goto  :  31  }
+
+---------step 18 -------
+{current state: 31 next symbol: rparen }
+{ reduce  :  19  }
+
+---------step 19 -------
+{current state: 10 next symbol: rparen }
+{ goto  :  13  }
+
+---------step 20 -------
+{current state: 13 next symbol: rparen }
+{ shift  :  25  }
+
+---------step 21 -------
+{current state: 25 next symbol: lbrace }
+{ shift  :  30  }
+
+---------step 22 -------
+{current state: 30 next symbol: vtype }
+{ shift  :  42  }
+
+---------step 23 -------
+{current state: 42 next symbol: id }
+{ shift  :  51  }
+
+---------step 24 -------
+{current state: 51 next symbol: semi }
+{ shift  :  9  }
+
+---------step 25 -------
+{current state: 9 next symbol: while }
+{ reduce  :  4  }
+
+---------step 26 -------
+{current state: 30 next symbol: while }
+{ goto  :  38  }
+
+---------step 27 -------
+{current state: 38 next symbol: while }
+{ reduce  :  25  }
+
+---------step 28 -------
+{current state: 30 next symbol: while }
+{ goto  :  37  }
+
+---------step 29 -------
+{current state: 37 next symbol: while }
+{ shift  :  41  }
+
+---------step 30 -------
+{current state: 41 next symbol: lparen }
+{ shift  :  50  }
+
+---------step 31 -------
+{current state: 50 next symbol: boolstr }
+{ shift  :  57  }
+
+---------step 32 -------
+{current state: 57 next symbol: comp }
+{ reduce  :  31  }
+
+---------step 33 -------
+{current state: 50 next symbol: comp }
+{ goto  :  56  }
+
+---------step 34 -------
+{current state: 56 next symbol: comp }
+{ shift  :  62  }
+
+---------step 35 -------
+{current state: 62 next symbol: boolstr }
+{ shift  :  57  }
+
+---------step 36 -------
+{current state: 57 next symbol: comp }
+{ reduce  :  31  }
+
+---------step 37 -------
+{current state: 62 next symbol: comp }
+{ goto  :  56  }
+
+---------step 38 -------
+{current state: 56 next symbol: comp }
+{ shift  :  62  }
+
+---------step 39 -------
+{current state: 62 next symbol: boolstr }
+{ shift  :  57  }
+
+---------step 40 -------
+{current state: 57 next symbol: rparen }
+{ reduce  :  31  }
+
+---------step 41 -------
+{current state: 62 next symbol: rparen }
+{ goto  :  56  }
+
+---------step 42 -------
+{current state: 56 next symbol: rparen }
+{ reduce  :  30  }
+
+---------step 43 -------
+{current state: 62 next symbol: rparen }
+{ goto  :  65  }
+
+---------step 44 -------
+{current state: 65 next symbol: rparen }
+{ reduce  :  29  }
+
+---------step 45 -------
+{current state: 62 next symbol: rparen }
+{ goto  :  65  }
+
+---------step 46 -------
+{current state: 65 next symbol: rparen }
+{ reduce  :  29  }
+
+---------step 47 -------
+{current state: 50 next symbol: rparen }
+{ goto  :  58  }
+
+---------step 48 -------
+{current state: 58 next symbol: rparen }
+{ shift  :  63  }
+
+---------step 49 -------
+{current state: 63 next symbol: lbrace }
+{ shift  :  66  }
+
+---------step 50 -------
+{current state: 66 next symbol: rbrace }
+{ reduce  :  24  }
+
+---------step 51 -------
+{current state: 66 next symbol: rbrace }
+{ goto  :  68  }
+
+---------step 52 -------
+{current state: 68 next symbol: rbrace }
+{ shift  :  70  }
+
+---------step 53 -------
+{current state: 70 next symbol: return }
+{ reduce  :  28  }
+
+---------step 54 -------
+{current state: 37 next symbol: return }
+{ goto  :  37  }
+
+---------step 55 -------
+{current state: 37 next symbol: return }
+{ reduce  :  24  }
+
+---------step 56 -------
+{current state: 37 next symbol: return }
+{ goto  :  47  }
+
+---------step 57 -------
+{current state: 47 next symbol: return }
+{ reduce  :  23  }
+
+---------step 58 -------
+{current state: 37 next symbol: return }
+{ goto  :  47  }
+
+---------step 59 -------
+{current state: 47 next symbol: return }
+{ reduce  :  23  }
+
+---------step 60 -------
+{current state: 30 next symbol: return }
+{ goto  :  36  }
+
+---------step 61 -------
+{current state: 36 next symbol: return }
+{ shift  :  46  }
+
+---------step 62 -------
+{current state: 46 next symbol: lparen }
+{ shift  :  22  }
+
+---------step 63 -------
+{current state: 22 next symbol: id }
+{ shift  :  23  }
+
+---------step 64 -------
+{current state: 23 next symbol: addsub }
+{ reduce  :  16  }
+
+---------step 65 -------
+{current state: 22 next symbol: addsub }
+{ goto  :  21  }
+
+---------step 66 -------
+{current state: 21 next symbol: addsub }
+{ reduce  :  14  }
+
+---------step 67 -------
+{current state: 22 next symbol: addsub }
+{ goto  :  20  }
+
+---------step 68 -------
+{current state: 20 next symbol: addsub }
+{ shift  :  27  }
+
+---------step 69 -------
+{current state: 27 next symbol: num }
+{ shift  :  24  }
+
+---------step 70 -------
+{current state: 24 next symbol: rparen }
+{ reduce  :  17  }
+
+---------step 71 -------
+{current state: 27 next symbol: rparen }
+{ goto  :  21  }
+
+---------step 72 -------
+{current state: 21 next symbol: rparen }
+{ reduce  :  14  }
+
+---------step 73 -------
+{current state: 27 next symbol: rparen }
+{ goto  :  20  }
+
+---------step 74 -------
+{current state: 20 next symbol: rparen }
+{ reduce  :  12  }
+
+---------step 75 -------
+{current state: 27 next symbol: rparen }
+{ goto  :  33  }
+
+---------step 76 -------
+{current state: 33 next symbol: rparen }
+{ reduce  :  11  }
+
+---------step 77 -------
+{current state: 22 next symbol: rparen }
+{ goto  :  29  }
+
+---------step 78 -------
+{current state: 29 next symbol: rparen }
+{ shift  :  35  }
+
+---------step 79 -------
+{current state: 35 next symbol: multdiv }
+{ reduce  :  15  }
+
+---------step 80 -------
+{current state: 46 next symbol: multdiv }
+{ goto  :  21  }
+
+---------step 81 -------
+{current state: 21 next symbol: multdiv }
+{ shift  :  28  }
+
+---------step 82 -------
+{current state: 28 next symbol: id }
+{ shift  :  23  }
+
+---------step 83 -------
+{current state: 23 next symbol: multdiv }
+{ reduce  :  16  }
+
+---------step 84 -------
+{current state: 28 next symbol: multdiv }
+{ goto  :  21  }
+
+---------step 85 -------
+{current state: 21 next symbol: multdiv }
+{ shift  :  28  }
+
+---------step 86 -------
+{current state: 28 next symbol: id }
+{ shift  :  23  }
+
+---------step 87 -------
+{current state: 23 next symbol: addsub }
+{ reduce  :  16  }
+
+---------step 88 -------
+{current state: 28 next symbol: addsub }
+{ goto  :  21  }
+
+---------step 89 -------
+{current state: 21 next symbol: addsub }
+{ reduce  :  14  }
+
+---------step 90 -------
+{current state: 28 next symbol: addsub }
+{ goto  :  34  }
+
+---------step 91 -------
+{current state: 34 next symbol: addsub }
+{ reduce  :  13  }
+
+---------step 92 -------
+{current state: 28 next symbol: addsub }
+{ goto  :  34  }
+
+---------step 93 -------
+{current state: 34 next symbol: addsub }
+{ reduce  :  13  }
+
+---------step 94 -------
+{current state: 46 next symbol: addsub }
+{ goto  :  20  }
+
+---------step 95 -------
+{current state: 20 next symbol: addsub }
+{ shift  :  27  }
+
+---------step 96 -------
+{current state: 27 next symbol: num }
+{ shift  :  24  }
+
+---------step 97 -------
+{current state: 24 next symbol: multdiv }
+{ reduce  :  17  }
+
+---------step 98 -------
+{current state: 27 next symbol: multdiv }
+{ goto  :  21  }
+
+---------step 99 -------
+{current state: 21 next symbol: multdiv }
+{ shift  :  28  }
+
+---------step 100 -------
+{current state: 28 next symbol: id }
+{ shift  :  23  }
+
+---------step 101 -------
+{current state: 23 next symbol: semi }
+{ reduce  :  16  }
+
+---------step 102 -------
+{current state: 28 next symbol: semi }
+{ goto  :  21  }
+
+---------step 103 -------
+{current state: 21 next symbol: semi }
+{ reduce  :  14  }
+
+---------step 104 -------
+{current state: 28 next symbol: semi }
+{ goto  :  34  }
+
+---------step 105 -------
+{current state: 34 next symbol: semi }
+{ reduce  :  13  }
+
+---------step 106 -------
+{current state: 27 next symbol: semi }
+{ goto  :  20  }
+
+---------step 107 -------
+{current state: 20 next symbol: semi }
+{ reduce  :  12  }
+
+---------step 108 -------
+{current state: 27 next symbol: semi }
+{ goto  :  33  }
+
+---------step 109 -------
+{current state: 33 next symbol: semi }
+{ reduce  :  11  }
+
+---------step 110 -------
+{current state: 46 next symbol: semi }
+{ goto  :  16  }
+
+---------step 111 -------
+{current state: 16 next symbol: semi }
+{ reduce  :  7  }
+
+---------step 112 -------
+{current state: 46 next symbol: semi }
+{ goto  :  54  }
+
+---------step 113 -------
+{current state: 54 next symbol: semi }
+{ shift  :  60  }
+
+---------step 114 -------
+{current state: 60 next symbol: rbrace }
+{ reduce  :  34  }
+
+---------step 115 -------
+{current state: 36 next symbol: rbrace }
+{ goto  :  45  }
+
+---------step 116 -------
+{current state: 45 next symbol: rbrace }
+{ shift  :  53  }
+
+---------step 117 -------
+{current state: 53 next symbol: vtype }
+{ reduce  :  18  }
+
+---------step 118 -------
+{current state: 0 next symbol: vtype }
+{ goto  :  3  }
+
+---------step 119 -------
+{current state: 3 next symbol: vtype }
+{ shift  :  4  }
+
+---------step 120 -------
+{current state: 4 next symbol: id }
+{ shift  :  7  }
+
+---------step 121 -------
+{current state: 7 next symbol: lparen }
+{ shift  :  10  }
+
+---------step 122 -------
+{current state: 10 next symbol: vtype }
+{ shift  :  14  }
+
+---------step 123 -------
+{current state: 14 next symbol: id }
+{ shift  :  26  }
+
+---------step 124 -------
+{current state: 26 next symbol: comma }
+{ shift  :  32  }
+
+---------step 125 -------
+{current state: 32 next symbol: vtype }
+{ shift  :  44  }
+
+---------step 126 -------
+{current state: 44 next symbol: id }
+{ shift  :  52  }
+
+---------step 127 -------
+{current state: 52 next symbol: rparen }
+{ reduce  :  22  }
+
+---------step 128 -------
+{current state: 52 next symbol: rparen }
+{ goto  :  59  }
+
+---------step 129 -------
+{current state: 59 next symbol: rparen }
+{ reduce  :  21  }
+
+---------step 130 -------
+{current state: 26 next symbol: rparen }
+{ goto  :  31  }
+
+---------step 131 -------
+{current state: 31 next symbol: rparen }
+{ reduce  :  19  }
+
+---------step 132 -------
+{current state: 10 next symbol: rparen }
+{ goto  :  13  }
+
+---------step 133 -------
+{current state: 13 next symbol: rparen }
+{ shift  :  25  }
+
+---------step 134 -------
+{current state: 25 next symbol: lbrace }
+{ shift  :  30  }
+
+---------step 135 -------
+{current state: 30 next symbol: return }
+{ reduce  :  24  }
+
+---------step 136 -------
+{current state: 30 next symbol: return }
+{ goto  :  36  }
+
+---------step 137 -------
+{current state: 36 next symbol: return }
+{ shift  :  46  }
+
+---------step 138 -------
+{current state: 46 next symbol: literal }
+{ shift  :  17  }
+
+---------step 139 -------
+{current state: 17 next symbol: semi }
+{ reduce  :  8  }
+
+---------step 140 -------
+{current state: 46 next symbol: semi }
+{ goto  :  54  }
+
+---------step 141 -------
+{current state: 54 next symbol: semi }
+{ shift  :  60  }
+
+---------step 142 -------
+{current state: 60 next symbol: rbrace }
+{ reduce  :  34  }
+
+---------step 143 -------
+{current state: 36 next symbol: rbrace }
+{ goto  :  45  }
+
+---------step 144 -------
+{current state: 45 next symbol: rbrace }
+{ shift  :  53  }
+
+---------step 145 -------
+{current state: 53 next symbol: vtype }
+{ reduce  :  18  }
+
+---------step 146 -------
+{current state: 3 next symbol: vtype }
+{ goto  :  3  }
+
+---------step 147 -------
+{current state: 3 next symbol: vtype }
+{ shift  :  4  }
+
+---------step 148 -------
+{current state: 4 next symbol: id }
+{ shift  :  7  }
+
+---------step 149 -------
+{current state: 7 next symbol: lparen }
+{ shift  :  10  }
+
+---------step 150 -------
+{current state: 10 next symbol: vtype }
+{ shift  :  14  }
+
+---------step 151 -------
+{current state: 14 next symbol: id }
+{ shift  :  26  }
+
+---------step 152 -------
+{current state: 26 next symbol: comma }
+{ shift  :  32  }
+
+---------step 153 -------
+{current state: 32 next symbol: vtype }
+{ shift  :  44  }
+
+---------step 154 -------
+{current state: 44 next symbol: id }
+{ shift  :  52  }
+
+---------step 155 -------
+{current state: 52 next symbol: comma }
+{ shift  :  32  }
+
+---------step 156 -------
+{current state: 32 next symbol: vtype }
+{ shift  :  44  }
+
+---------step 157 -------
+{current state: 44 next symbol: id }
+{ shift  :  52  }
+
+---------step 158 -------
+{current state: 52 next symbol: comma }
+{ shift  :  32  }
+
+---------step 159 -------
+{current state: 32 next symbol: vtype }
+{ shift  :  44  }
+
+---------step 160 -------
+{current state: 44 next symbol: id }
+{ shift  :  52  }
+
+---------step 161 -------
+{current state: 52 next symbol: rparen }
+{ reduce  :  22  }
+
+---------step 162 -------
+{current state: 52 next symbol: rparen }
+{ goto  :  59  }
+
+---------step 163 -------
+{current state: 59 next symbol: rparen }
+{ reduce  :  21  }
+
+---------step 164 -------
+{current state: 52 next symbol: rparen }
+{ goto  :  59  }
+
+---------step 165 -------
+{current state: 59 next symbol: rparen }
+{ reduce  :  21  }
+
+---------step 166 -------
+{current state: 52 next symbol: rparen }
+{ goto  :  59  }
+
+---------step 167 -------
+{current state: 59 next symbol: rparen }
+{ reduce  :  21  }
+
+---------step 168 -------
+{current state: 26 next symbol: rparen }
+{ goto  :  31  }
+
+---------step 169 -------
+{current state: 31 next symbol: rparen }
+{ reduce  :  19  }
+
+---------step 170 -------
+{current state: 10 next symbol: rparen }
+{ goto  :  13  }
+
+---------step 171 -------
+{current state: 13 next symbol: rparen }
+{ shift  :  25  }
+
+---------step 172 -------
+{current state: 25 next symbol: lbrace }
+{ shift  :  30  }
+
+---------step 173 -------
+{current state: 30 next symbol: while }
+{ shift  :  41  }
+
+---------step 174 -------
+{current state: 41 next symbol: lparen }
+{ shift  :  50  }
+
+---------step 175 -------
+{current state: 50 next symbol: boolstr }
+{ shift  :  57  }
+
+---------step 176 -------
+{current state: 57 next symbol: comp }
+{ reduce  :  31  }
+
+---------step 177 -------
+{current state: 50 next symbol: comp }
+{ goto  :  56  }
+
+---------step 178 -------
+{current state: 56 next symbol: comp }
+{ shift  :  62  }
+
+---------step 179 -------
+{current state: 62 next symbol: boolstr }
+{ shift  :  57  }
+
+---------step 180 -------
+{current state: 57 next symbol: rparen }
+{ reduce  :  31  }
+
+---------step 181 -------
+{current state: 62 next symbol: rparen }
+{ goto  :  56  }
+
+---------step 182 -------
+{current state: 56 next symbol: rparen }
+{ reduce  :  30  }
+
+---------step 183 -------
+{current state: 62 next symbol: rparen }
+{ goto  :  65  }
+
+---------step 184 -------
+{current state: 65 next symbol: rparen }
+{ reduce  :  29  }
+
+---------step 185 -------
+{current state: 50 next symbol: rparen }
+{ goto  :  58  }
+
+---------step 186 -------
+{current state: 58 next symbol: rparen }
+{ shift  :  63  }
+
+---------step 187 -------
+{current state: 63 next symbol: lbrace }
+{ shift  :  66  }
+
+---------step 188 -------
+{current state: 66 next symbol: rbrace }
+{ reduce  :  24  }
+
+---------step 189 -------
+{current state: 66 next symbol: rbrace }
+{ goto  :  68  }
+
+---------step 190 -------
+{current state: 68 next symbol: rbrace }
+{ shift  :  70  }
+
+---------step 191 -------
+{current state: 70 next symbol: id }
+{ reduce  :  28  }
+
+---------step 192 -------
+{current state: 30 next symbol: id }
+{ goto  :  37  }
+
+---------step 193 -------
+{current state: 37 next symbol: id }
+{ shift  :  43  }
+
+---------step 194 -------
+{current state: 43 next symbol: assign }
+{ shift  :  11  }
+
+---------step 195 -------
+{current state: 11 next symbol: num }
+{ shift  :  24  }
+
+---------step 196 -------
+{current state: 24 next symbol: multdiv }
+{ reduce  :  17  }
+
+---------step 197 -------
+{current state: 11 next symbol: multdiv }
+{ goto  :  21  }
+
+---------step 198 -------
+{current state: 21 next symbol: multdiv }
+{ shift  :  28  }
+
+---------step 199 -------
+{current state: 28 next symbol: id }
+{ shift  :  23  }
+
+---------step 200 -------
+{current state: 23 next symbol: addsub }
+{ reduce  :  16  }
+
+---------step 201 -------
+{current state: 28 next symbol: addsub }
+{ goto  :  21  }
+
+---------step 202 -------
+{current state: 21 next symbol: addsub }
+{ reduce  :  14  }
+
+---------step 203 -------
+{current state: 28 next symbol: addsub }
+{ goto  :  34  }
+
+---------step 204 -------
+{current state: 34 next symbol: addsub }
+{ reduce  :  13  }
+
+---------step 205 -------
+{current state: 11 next symbol: addsub }
+{ goto  :  20  }
+
+---------step 206 -------
+{current state: 20 next symbol: addsub }
+{ shift  :  27  }
+
+---------step 207 -------
+{current state: 27 next symbol: id }
+{ shift  :  23  }
+
+---------step 208 -------
+{current state: 23 next symbol: multdiv }
+{ reduce  :  16  }
+
+---------step 209 -------
+{current state: 27 next symbol: multdiv }
+{ goto  :  21  }
+
+---------step 210 -------
+{current state: 21 next symbol: multdiv }
+{ shift  :  28  }
+
+---------step 211 -------
+{current state: 28 next symbol: num }
+{ shift  :  24  }
+
+---------step 212 -------
+{current state: 24 next symbol: semi }
+{ reduce  :  17  }
+
+---------step 213 -------
+{current state: 28 next symbol: semi }
+{ goto  :  21  }
+
+---------step 214 -------
+{current state: 21 next symbol: semi }
+{ reduce  :  14  }
+
+---------step 215 -------
+{current state: 28 next symbol: semi }
+{ goto  :  34  }
+
+---------step 216 -------
+{current state: 34 next symbol: semi }
+{ reduce  :  13  }
+
+---------step 217 -------
+{current state: 27 next symbol: semi }
+{ goto  :  20  }
+
+---------step 218 -------
+{current state: 20 next symbol: semi }
+{ reduce  :  12  }
+
+---------step 219 -------
+{current state: 27 next symbol: semi }
+{ goto  :  33  }
+
+---------step 220 -------
+{current state: 33 next symbol: semi }
+{ reduce  :  11  }
+
+---------step 221 -------
+{current state: 11 next symbol: semi }
+{ goto  :  16  }
+
+---------step 222 -------
+{current state: 16 next symbol: semi }
+{ reduce  :  7  }
+
+---------step 223 -------
+{current state: 11 next symbol: semi }
+{ goto  :  15  }
+
+---------step 224 -------
+{current state: 15 next symbol: semi }
+{ reduce  :  6  }
+
+---------step 225 -------
+{current state: 37 next symbol: semi }
+{ goto  :  39  }
+
+---------step 226 -------
+{current state: 39 next symbol: semi }
+{ shift  :  48  }
+
+---------step 227 -------
+{current state: 48 next symbol: return }
+{ reduce  :  26  }
+
+---------step 228 -------
+{current state: 37 next symbol: return }
+{ goto  :  37  }
+
+---------step 229 -------
+{current state: 37 next symbol: return }
+{ reduce  :  24  }
+
+---------step 230 -------
+{current state: 37 next symbol: return }
+{ goto  :  47  }
+
+---------step 231 -------
+{current state: 47 next symbol: return }
+{ reduce  :  23  }
+
+---------step 232 -------
+{current state: 37 next symbol: return }
+{ goto  :  47  }
+
+---------step 233 -------
+{current state: 47 next symbol: return }
+{ reduce  :  23  }
+
+---------step 234 -------
+{current state: 30 next symbol: return }
+{ goto  :  36  }
+
+---------step 235 -------
+{current state: 36 next symbol: return }
+{ shift  :  46  }
+
+---------step 236 -------
+{current state: 46 next symbol: literal }
+{ shift  :  17  }
+
+---------step 237 -------
+{current state: 17 next symbol: semi }
+{ reduce  :  8  }
+
+---------step 238 -------
+{current state: 46 next symbol: semi }
+{ goto  :  54  }
+
+---------step 239 -------
+{current state: 54 next symbol: semi }
+{ shift  :  60  }
+
+---------step 240 -------
+{current state: 60 next symbol: rbrace }
+{ reduce  :  34  }
+
+---------step 241 -------
+{current state: 36 next symbol: rbrace }
+{ goto  :  45  }
+
+---------step 242 -------
+{current state: 45 next symbol: rbrace }
+{ shift  :  53  }
+
+---------step 243 -------
+{current state: 53 next symbol: $ }
+{ reduce  :  18  }
+
+---------step 244 -------
+{current state: 3 next symbol: $ }
+{ goto  :  3  }
+
+---------step 245 -------
+{current state: 3 next symbol: $ }
+{ reduce  :  3  }
+
+---------step 246 -------
+{current state: 3 next symbol: $ }
+{ goto  :  6  }
+
+---------step 247 -------
+{current state: 6 next symbol: $ }
+{ reduce  :  2  }
+
+---------step 248 -------
+{current state: 3 next symbol: $ }
+{ goto  :  6  }
+
+---------step 249 -------
+{current state: 6 next symbol: $ }
+{ reduce  :  2  }
+
+---------step 250 -------
+{current state: 3 next symbol: $ }
+{ goto  :  6  }
+
+---------step 251 -------
+{current state: 6 next symbol: $ }
+{ reduce  :  2  }
+
+---------step 252 -------
+{current state: 0 next symbol: $ }
+{ goto  :  1  }
+
+---------step 253 -------
+{current state: 1 next symbol: $ }
+{ accept  :  -1  }
+
+[1;92m accept ![0;92m
+[[['vtype'], ['id'], ['lparen'], [['vtype'], ['id'], [['comma'], ['vtype'], ['id'], [['comma'], ['vtype'], ['id'], ['MOREARGS'], 'MOREARGS'], 'MOREARGS'], 'ARG'], ['rparen'], ['lbrace'], [[[['vtype'], ['id'], ['semi'], 'VDECL'], 'STMT'], [[['while'], ['lparen'], [[['boolstr'], 'TCOND'], ['comp'], [[['boolstr'], 'TCOND'], ['comp'], [[['boolstr'], 'TCOND'], 'COND'], 'COND'], 'COND'], ['rparen'], ['lbrace'], ['BLOCK'], ['rbrace'], 'STMT'], ['BLOCK'], 'BLOCK'], 'BLOCK'], [['return'], [[[[['lparen'], [[[['id'], 'FEXPR'], 'TEXPR'], ['addsub'], [[[['num'], 'FEXPR'], 'TEXPR'], 'EXPR'], 'EXPR'], ['rparen'], 'FEXPR'], ['multdiv'], [[['id'], 'FEXPR'], ['multdiv'], [[['id'], 'FEXPR'], 'TEXPR'], 'TEXPR'], 'TEXPR'], ['addsub'], [[[['num'], 'FEXPR'], ['multdiv'], [[['id'], 'FEXPR'], 'TEXPR'], 'TEXPR'], 'EXPR'], 'EXPR'], 'RHS'], ['semi'], 'RETURN'], ['rbrace'], 'FDECL'], [[['vtype'], ['id'], ['lparen'], [['vtype'], ['id'], [['comma'], ['vtype'], ['id'], ['MOREARGS'], 'MOREARGS'], 'ARG'], ['rparen'], ['lbrace'], ['BLOCK'], [['return'], [['literal'], 'RHS'], ['semi'], 'RETURN'], ['rbrace'], 'FDECL'], [[['vtype'], ['id'], ['lparen'], [['vtype'], ['id'], [['comma'], ['vtype'], ['id'], [['comma'], ['vtype'], ['id'], [['comma'], ['vtype'], ['id'], ['MOREARGS'], 'MOREARGS'], 'MOREARGS'], 'MOREARGS'], 'ARG'], ['rparen'], ['lbrace'], [[['while'], ['lparen'], [[['boolstr'], 'TCOND'], ['comp'], [[['boolstr'], 'TCOND'], 'COND'], 'COND'], ['rparen'], ['lbrace'], ['BLOCK'], ['rbrace'], 'STMT'], [[[['id'], ['assign'], [[[[['num'], 'FEXPR'], ['multdiv'], [[['id'], 'FEXPR'], 'TEXPR'], 'TEXPR'], ['addsub'], [[[['id'], 'FEXPR'], ['multdiv'], [[['num'], 'FEXPR'], 'TEXPR'], 'TEXPR'], 'EXPR'], 'EXPR'], 'RHS'], 'ASSIGN'], ['semi'], 'STMT'], ['BLOCK'], 'BLOCK'], 'BLOCK'], [['return'], [['literal'], 'RHS'], ['semi'], 'RETURN'], ['rbrace'], 'FDECL'], ['CODE'], 'CODE'], 'CODE'], 'CODE']
+[0m

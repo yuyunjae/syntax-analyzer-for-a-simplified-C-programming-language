@@ -1,0 +1,19 @@
+---------step 1 -------
+{current state: 0 next symbol: vtype }
+{ shift  :  4  }
+
+---------step 2 -------
+{current state: 4 next symbol: id }
+{ shift  :  7  }
+
+---------step 3 -------
+{current state: 7 next symbol: assign }
+{ shift  :  11  }
+
+---------step 4 -------
+{current state: 11 next symbol: character }
+{ shift  :  18  }
+
+[1;91m reject !
+ step 5 [Parsing Error] :[0;91m value is not exist in state: 18 , nextSymbol: id
+[1;91m remain input string :[0;91m id vtype id assign character $ [0m 

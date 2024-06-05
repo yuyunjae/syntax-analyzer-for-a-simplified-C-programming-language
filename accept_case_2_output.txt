@@ -1,0 +1,43 @@
+---------step 1 -------
+{current state: 0 next symbol: vtype }
+{ shift  :  4  }
+
+---------step 2 -------
+{current state: 4 next symbol: id }
+{ shift  :  7  }
+
+---------step 3 -------
+{current state: 7 next symbol: semi }
+{ shift  :  9  }
+
+---------step 4 -------
+{current state: 9 next symbol: $ }
+{ reduce  :  4  }
+
+---------step 5 -------
+{current state: 0 next symbol: $ }
+{ goto  :  2  }
+
+---------step 6 -------
+{current state: 2 next symbol: $ }
+{ reduce  :  3  }
+
+---------step 7 -------
+{current state: 2 next symbol: $ }
+{ goto  :  5  }
+
+---------step 8 -------
+{current state: 5 next symbol: $ }
+{ reduce  :  1  }
+
+---------step 9 -------
+{current state: 0 next symbol: $ }
+{ goto  :  1  }
+
+---------step 10 -------
+{current state: 1 next symbol: $ }
+{ accept  :  -1  }
+
+[1;92m accept ![0;92m
+[[['vtype'], ['id'], ['semi'], 'VDECL'], ['CODE'], 'CODE']
+[0m
